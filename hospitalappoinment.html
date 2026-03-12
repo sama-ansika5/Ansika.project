@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hospital Appointment System</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background: linear-gradient(to right,#d7f0ff,#ffffff);
+}
+
+/* Header */
+
+header{
+background:#0077b6;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* Navigation */
+
+nav{
+background:#023e8a;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+}
+
+/* Form Box */
+
+.container{
+width:400px;
+margin:40px auto;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 10px grey;
+}
+
+/* Inputs */
+
+input,select{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid grey;
+}
+
+/* Button */
+
+button{
+width:100%;
+padding:12px;
+background:#0077b6;
+color:white;
+border:none;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0096c7;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+background:#023e8a;
+color:white;
+padding:10px;
+margin-top:40px;
+}
+
+</style>
+
+<script>
+
+function bookAppointment(){
+
+var name=document.getElementById("name").value;
+var doctor=document.getElementById("doctor").value;
+var date=document.getElementById("date").value;
+
+if(name=="" || doctor=="" || date=="")
+{
+alert("Please fill all fields");
+}
+else
+{
+alert("Appointment Booked Successfully with "+doctor);
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>City Care Hospital</h1>
+<p>Your Health, Our Priority</p>
+</header>
+
+<nav>
+<a href="hospitalindex.html">Home</a>
+<a href="hospitaldoctors.html">Doctors</a>
+<a href="hospitalappoinment.html">Appointment</a>
+<a href="hospitalcontact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+<h2 align="center">Book Appointment</h2>
+
+<form>
+
+<label>Patient Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+
+<label>Age</label>
+<input type="number" placeholder="Enter age">
+
+<label>Select Doctor</label>
+
+<select>
+<option>Select Doctor</option>
+<option>Dr. Raj</option>
+<option>Dr. Priya</option>
+<option>Dr. Kumar</option>
+<option>Dr. Anjali</option>
+<option>Dr. Arvind</option>
+</select>
+<label>Select Date</label>
+<input type="date" id="date">
+
+<label>Symptoms</label>
+<input type="text" placeholder="Enter symptoms">
+
+<button type="button" onclick="bookAppointment()">Book Appointment</button>
+
+</form>
+
+</div>
+
+<footer>
+<p>© 2026 City Care Hospital | Emergency: 108</p>
+</footer>
+
+</body>
+</html>
